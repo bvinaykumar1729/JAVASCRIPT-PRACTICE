@@ -1,0 +1,81 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function library(bookName,Author,Year,Genre,Price)
+{
+this.bookName=bookName;
+this.Author=Author;
+this.Year=Year;
+this.Genre=Genre;
+this.Price=Price;
+}
+var book1=new library("crimesong","DavidSwinson",2009,"Crimethriller",4500);
+var book2=new library("Jar of hearts","Lisa Jewell",2008,"Thriller",5000);
+var book3=new library("Bad Monkey","CarHiaasen",2009,"Thriller",4500);
+var book4=new library("The Time is running out","MichelWood",2008,"Thriller",5000);
+var book5=new library("The Hobbit","Tolkein",2009,"Fiction",6000);
+var book6=new library("The catch","Joseph",2007,"Fiction",7000);
+var book7=new library("Dune","Frank Herbert",2008,"Fiction",4500);
+var book8=new library("shogu","James clavell",2005,"Fiction",3000);
+var book9=new library("Ramayanam","Valmiki",1500,"Ethihas",6000);
+var book10=new library("Mahabharatam","Vyasa",1500,"Ethihas",5500);
+var book11=new library("Bhagavatam","Pothana",1600,"Ethihas",6000);
+var book12=new library("Open","Andreagassi",2001,"Autobiography","5000");
+
+var allbooks=[book1,book2,book3,book4,book5,book6,book7,book8,book9,book10,book11,book12]
+
+var arr=allbooks.filter((ele)=>{return ele.Genre=="Thriller"});
+var arr2=allbooks.filter((ele)=>{return ele.Genre=="Fiction"});
+var arr3=allbooks.filter((ele)=>{return ele.Genre=="Ethihas"});
+var arr4=allbooks.filter((ele)=>{return ele.Genre=="Autobiography"});
+
+ n=parseInt(prompt("enter a number"));
+
+switch(n)
+{
+case 1:for(ele of arr)
+{
+for(mod in ele)
+{
+document.write(mod+":"+ele[mod]+"<br>")
+}
+document.write("<br>")
+};
+break;
+case 2:for(ele of arr2)
+{
+for(mod in ele)
+{
+document.write(mod+":"+ele[mod]+"<br>")
+}
+document.write("<br>")
+};
+break;
+
+case 3:for(ele of arr3)
+{
+for(mod in ele)
+{
+document.write(mod+":"+ele[mod]+"<br>")
+}
+document.write("<br>")
+};
+break;
+
+
+case 4:for(ele of arr4)
+{
+for(mod in ele)
+{
+document.write(mod+":"+ele[mod]+"<br>")
+}
+document.write("<br>")
+};
+break;
+default:alert("not in range")
+}
+</script>
+</body>
+</html>
